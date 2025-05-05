@@ -1,0 +1,410 @@
+<!--<head>-->
+<!--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">-->
+<!--    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>-->
+<!--</head>-->
+
+<!--<body class="flex-1 overflow-auto">-->
+<!--<div class="p-4 lg:p-6">-->
+<!--    <div class="max-w-6xl mx-auto" style="margin-top:4rem">-->
+<!--        <h1 class="text-2xl font-bold mb-6">Settings</h1>-->
+<!--        <div dir="ltr" data-orientation="horizontal" class="w-full">-->
+
+<!--            <div data-state="active" data-orientation="horizontal" role="tabpanel"-->
+<!--                 aria-labelledby="radix-«r0»-trigger-general" id="radix-«r0»-content-general" tabindex="0"-->
+<!--                 class="mt-2 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">-->
+<!--                <div class="grid gap-6">-->
+
+<!--                    <div class="rounded-lg border bg-card text-card-foreground shadow-sm" data-v0-t="card">-->
+<!--                        <div class="flex flex-col space-y-1.5 p-6">-->
+<!--                            <h3 class="text-2xl font-semibold leading-none tracking-tight flex items-center gap-2">-->
+<!--                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"-->
+<!--                                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"-->
+<!--                                     stroke-linejoin="round" class="lucide lucide-shield w-5 h-5">-->
+<!--                                    <path-->
+<!--                                            d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z">-->
+<!--                                    </path>-->
+<!--                                </svg>System Access-->
+<!--                            </h3>-->
+<!--                            <p class="text-sm text-muted-foreground">Configure who can access different parts of the-->
+<!--                                system</p>-->
+<!--                        </div>-->
+<!--                        <div class="p-6 pt-0 space-y-4">-->
+<!--                            <div class="space-y-4">-->
+<!--                                <div class="flex items-center justify-between">-->
+<!--                                    <div>-->
+<!--                                        <h4 class="font-medium">Administrator Access</h4>-->
+<!--                                        <p class="text-sm text-muted-foreground">Allow administrators to assign-->
+<!--                                            staff</p>-->
+
+<!--                                        <hr  style="width: 68rem;margin-top: 1rem;">-->
+<!--                                    </div><button type="button" role="switch" aria-checked="true"-->
+<!--                                                  data-state="checked" value="on"-->
+<!--                                                  class="peer inline-flex h-6 w-11 shrink-0 cursor-pointer items-center rounded-full border-2 border-transparent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary data-[state=unchecked]:bg-input"><span-->
+<!--                                        data-state="checked"-->
+<!--                                        class="pointer-events-none block h-5 w-5 rounded-full bg-background shadow-lg ring-0 transition-transform data-[state=checked]:translate-x-5 data-[state=unchecked]:translate-x-0"></span></button>-->
+<!--                                </div>-->
+<!--                                <div data-orientation="horizontal" role="none"-->
+<!--                                     class="shrink-0 bg-border h-[1px] w-full"></div>-->
+<!--                                <div class="flex items-center justify-between">-->
+<!--                                    <div>-->
+<!--                                        <h4 class="font-medium">Chief Invigilator Access</h4>-->
+<!--                                        <p class="text-sm text-muted-foreground">Allow chief invigilators to view-->
+<!--                                            assignments</p>-->
+<!--                                        <hr  style="width: 68rem;margin-top: 1rem;">-->
+<!--                                    </div><button type="button" role="switch" aria-checked="true"-->
+<!--                                                  data-state="checked" value="on"-->
+<!--                                                  class="btn btn-primary peer inline-flex h-6 w-11 shrink-0 cursor-pointer items-center rounded-full border-2 border-transparent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary data-[state=unchecked]:bg-input"><span-->
+<!--                                        data-state="checked"-->
+<!--                                        class="pointer-events-none block h-5 w-5 rounded-full bg-background shadow-lg ring-0 transition-transform data-[state=checked]:translate-x-5 data-[state=unchecked]:translate-x-0"></span></button>-->
+<!--                                </div>-->
+<!--                                <div data-orientation="horizontal" role="none"-->
+<!--                                     class="shrink-0 bg-border h-[1px] w-full"></div>-->
+<!--                                <div class="flex items-center justify-between">-->
+<!--                                    <div>-->
+<!--                                        <h4 class="font-medium">Staff Self-Service</h4>-->
+<!--                                        <p class="text-sm text-muted-foreground">Allow staff to view their own-->
+<!--                                            assignments</p>-->
+
+<!--                                    </div><button type="button" role="switch" aria-checked="true"-->
+<!--                                                  data-state="checked" value="on"-->
+<!--                                                  class="peer inline-flex h-6 w-11 shrink-0 cursor-pointer items-center rounded-full border-2 border-transparent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary data-[state=unchecked]:bg-input"><span-->
+<!--                                        data-state="checked"-->
+<!--                                        class="pointer-events-none block h-5 w-5 rounded-full bg-background shadow-lg ring-0 transition-transform data-[state=checked]:translate-x-5 data-[state=unchecked]:translate-x-0"></span></button>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+
+<!--                </div>-->
+<!--            </div>-->
+
+
+<!--            <div data-state="active" data-orientation="horizontal" role="tabpanel"-->
+<!--                 aria-labelledby="radix-«r0»-trigger-notifications" id="radix-«r0»-content-notifications"-->
+<!--                 tabindex="0"-->
+<!--                 class="mt-2 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">-->
+<!--                <div class="rounded-lg border bg-card text-card-foreground shadow-sm" data-v0-t="card">-->
+<!--                    <div class="flex flex-col space-y-1.5 p-6">-->
+<!--                        <h3 class="text-2xl font-semibold leading-none tracking-tight flex items-center gap-2"><svg-->
+<!--                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"-->
+<!--                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"-->
+<!--                                stroke-linejoin="round" class="lucide lucide-bell w-5 h-5">-->
+<!--                            <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"></path>-->
+<!--                            <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"></path>-->
+<!--                        </svg>Notification Settings</h3>-->
+<!--                        <p class="text-sm text-muted-foreground">Configure how and when notifications are sent</p>-->
+<!--                    </div>-->
+<!--                    <div class="p-6 pt-0 space-y-4">-->
+<!--                        <div class="space-y-4">-->
+<!--                            <div class="flex items-center justify-between">-->
+<!--                                <div>-->
+<!--                                    <h4 class="font-medium">Email Notifications</h4>-->
+<!--                                    <p class="text-sm text-muted-foreground">Send email notifications to staff</p>-->
+<!--                                </div><button type="button" role="switch" aria-checked="true" data-state="checked"-->
+<!--                                              value="on"-->
+<!--                                              class="peer inline-flex h-6 w-11 shrink-0 cursor-pointer items-center rounded-full border-2 border-transparent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary data-[state=unchecked]:bg-input"><span-->
+<!--                                    data-state="checked"-->
+<!--                                    class="pointer-events-none block h-5 w-5 rounded-full bg-background shadow-lg ring-0 transition-transform data-[state=checked]:translate-x-5 data-[state=unchecked]:translate-x-0"></span></button>-->
+<!--                            </div>-->
+<!--                            <div class="ml-6 border-l-2 pl-4 space-y-4">-->
+<!--                                <div class="flex items-center justify-between">-->
+<!--                                    <div>-->
+<!--                                        <h4 class="font-medium">Assignment Notifications</h4>-->
+<!--                                        <p class="text-sm text-muted-foreground">Notify when staff is assigned to an-->
+<!--                                            exam</p>-->
+<!--                                    </div><button type="button" role="switch" aria-checked="true"-->
+<!--                                                  data-state="checked" value="on"-->
+<!--                                                  class="peer inline-flex h-6 w-11 shrink-0 cursor-pointer items-center rounded-full border-2 border-transparent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary data-[state=unchecked]:bg-input"><span-->
+<!--                                        data-state="checked"-->
+<!--                                        class="pointer-events-none block h-5 w-5 rounded-full bg-background shadow-lg ring-0 transition-transform data-[state=checked]:translate-x-5 data-[state=unchecked]:translate-x-0"></span></button>-->
+<!--                                </div>-->
+<!--                                <div class="flex items-center justify-between">-->
+<!--                                    <div>-->
+<!--                                        <h4 class="font-medium">Reminder Notifications</h4>-->
+<!--                                        <p class="text-sm text-muted-foreground">Send reminders before exam date</p>-->
+<!--                                    </div><button type="button" role="switch" aria-checked="true"-->
+<!--                                                  data-state="checked" value="on"-->
+<!--                                                  class="peer inline-flex h-6 w-11 shrink-0 cursor-pointer items-center rounded-full border-2 border-transparent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary data-[state=unchecked]:bg-input"><span-->
+<!--                                        data-state="checked"-->
+<!--                                        class="pointer-events-none block h-5 w-5 rounded-full bg-background shadow-lg ring-0 transition-transform data-[state=checked]:translate-x-5 data-[state=unchecked]:translate-x-0"></span></button>-->
+<!--                                </div>-->
+<!--                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">-->
+<!--                                    <div class="space-y-2"><label-->
+<!--                                            class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"-->
+<!--                                            for="reminder-time">Reminder Time (hours before exam)</label><button-->
+<!--                                            type="button" role="combobox" aria-controls="radix-«rp»"-->
+<!--                                            aria-expanded="false" aria-autocomplete="none" dir="ltr"-->
+<!--                                            data-state="closed"-->
+<!--                                            class="flex h-10 w-full items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 [&amp;>span]:line-clamp-1"><span-->
+<!--                                            style="pointer-events: none;">24 hours</span><svg-->
+<!--                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"-->
+<!--                                            viewBox="0 0 24 24" fill="none" stroke="currentColor"-->
+<!--                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"-->
+<!--                                            class="lucide lucide-chevron-down h-4 w-4 opacity-50"-->
+<!--                                            aria-hidden="true">-->
+<!--                                        <path d="m6 9 6 6 6-6"></path>-->
+<!--                                    </svg></button></div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div data-orientation="horizontal" role="none"-->
+<!--                                 class="shrink-0 bg-border h-[1px] w-full"></div>-->
+<!--                            <div class="flex items-center justify-between">-->
+<!--                                <div>-->
+<!--                                    <h4 class="font-medium">System Notifications</h4>-->
+<!--                                    <p class="text-sm text-muted-foreground">Send notifications about system updates-->
+<!--                                    </p>-->
+<!--                                </div><button type="button" role="switch" aria-checked="true" data-state="checked"-->
+<!--                                              value="on"-->
+<!--                                              class="peer inline-flex h-6 w-11 shrink-0 cursor-pointer items-center rounded-full border-2 border-transparent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary data-[state=unchecked]:bg-input"><span-->
+<!--                                    data-state="checked"-->
+<!--                                    class="pointer-events-none block h-5 w-5 rounded-full bg-background shadow-lg ring-0 transition-transform data-[state=checked]:translate-x-5 data-[state=unchecked]:translate-x-0"></span></button>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+
+<!--            </div>-->
+
+<!--            <div data-state="active" data-orientation="horizontal" role="tabpanel"-->
+<!--                 aria-labelledby="radix-«r0»-trigger-staff" id="radix-«r0»-content-staff" tabindex="0"-->
+<!--                 class="mt-2 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">-->
+<!--                <div class="rounded-lg border bg-card text-card-foreground shadow-sm" data-v0-t="card">-->
+<!--                    <div class="flex flex-col space-y-1.5 p-6">-->
+<!--                        <h3 class="text-2xl font-semibold leading-none tracking-tight flex items-center gap-2"><svg-->
+<!--                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"-->
+<!--                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"-->
+<!--                                stroke-linejoin="round" class="lucide lucide-users w-5 h-5">-->
+<!--                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>-->
+<!--                            <circle cx="9" cy="7" r="4"></circle>-->
+<!--                            <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>-->
+<!--                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>-->
+<!--                        </svg>Staff Management Settings</h3>-->
+<!--                        <p class="text-sm text-muted-foreground">Configure how staff are managed and assigned</p>-->
+<!--                    </div>-->
+<!--                    <div class="p-6 pt-0 space-y-4">-->
+<!--                        <div class="space-y-4">-->
+<!--                            <div class="flex items-center justify-between">-->
+<!--                                <div>-->
+<!--                                    <h4 class="font-medium">Auto-Assignment</h4>-->
+<!--                                    <p class="text-sm text-muted-foreground">Automatically assign staff based on-->
+<!--                                        availability</p>-->
+<!--                                    <hr  style="width: 68rem;margin-top: 1rem;">-->
+<!--                                </div><button type="button" role="switch" aria-checked="false"-->
+<!--                                              data-state="unchecked" value="on"-->
+<!--                                              class="peer inline-flex h-6 w-11 shrink-0 cursor-pointer items-center rounded-full border-2 border-transparent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary data-[state=unchecked]:bg-input"><span-->
+<!--                                    data-state="unchecked"-->
+<!--                                    class="pointer-events-none block h-5 w-5 rounded-full bg-background shadow-lg ring-0 transition-transform data-[state=checked]:translate-x-5 data-[state=unchecked]:translate-x-0"></span></button>-->
+<!--                            </div>-->
+<!--                            <div data-orientation="horizontal" role="none"-->
+<!--                                 class="shrink-0 bg-border h-[1px] w-full"></div>-->
+<!--                            <div class="flex items-center justify-between">-->
+<!--                                <div>-->
+<!--                                    <h4 class="font-medium">Staff Confirmation</h4>-->
+<!--                                    <p class="text-sm text-muted-foreground">Require staff to confirm assignments-->
+<!--                                    </p> <hr  style="width: 68rem;margin-top: 1rem;">-->
+<!--                                </div><button type="button" role="switch" aria-checked="true" data-state="checked"-->
+<!--                                              value="on"-->
+<!--                                              class="peer inline-flex h-6 w-11 shrink-0 cursor-pointer items-center rounded-full border-2 border-transparent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary data-[state=unchecked]:bg-input"><span-->
+<!--                                    data-state="checked"-->
+<!--                                    class="pointer-events-none block h-5 w-5 rounded-full bg-background shadow-lg ring-0 transition-transform data-[state=checked]:translate-x-5 data-[state=unchecked]:translate-x-0"></span></button>-->
+<!--                            </div>-->
+<!--                            <div data-orientation="horizontal" role="none"-->
+<!--                                 class="shrink-0 bg-border h-[1px] w-full"></div>-->
+<!--                            <div class="flex items-center justify-between">-->
+<!--                                <div>-->
+<!--                                    <h4 class="font-medium">Staff Substitution</h4>-->
+<!--                                    <p class="text-sm text-muted-foreground">Allow staff to request substitutions-->
+<!--                                    </p>-->
+<!--                                </div><button type="button" role="switch" aria-checked="true" data-state="checked"-->
+<!--                                              value="on"-->
+<!--                                              class="peer inline-flex h-6 w-11 shrink-0 cursor-pointer items-center rounded-full border-2 border-transparent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary data-[state=unchecked]:bg-input"><span-->
+<!--                                    data-state="checked"-->
+<!--                                    class="pointer-events-none block h-5 w-5 rounded-full bg-background shadow-lg ring-0 transition-transform data-[state=checked]:translate-x-5 data-[state=unchecked]:translate-x-0"></span></button>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+
+<!--            </div>-->
+
+<!--            <div data-state="active" data-orientation="horizontal" role="tabpanel"-->
+<!--                 aria-labelledby="radix-«r0»-trigger-exams" id="radix-«r0»-content-exams" tabindex="0"-->
+<!--                 class="mt-2 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">-->
+<!--                <div class="rounded-lg border bg-card text-card-foreground shadow-sm" data-v0-t="card">-->
+<!--                    <div class="flex flex-col space-y-1.5 p-6">-->
+<!--                        <h3 class="text-2xl font-semibold leading-none tracking-tight flex items-center gap-2"><svg-->
+<!--                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"-->
+<!--                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"-->
+<!--                                stroke-linejoin="round" class="lucide lucide-calendar w-5 h-5">-->
+<!--                            <path d="M8 2v4"></path>-->
+<!--                            <path d="M16 2v4"></path>-->
+<!--                            <rect width="18" height="18" x="3" y="4" rx="2"></rect>-->
+<!--                            <path d="M3 10h18"></path>-->
+<!--                        </svg>Exam Configuration</h3>-->
+<!--                        <p class="text-sm text-muted-foreground">Configure exam settings and requirements</p>-->
+<!--                    </div>-->
+<!--                    <div class="p-6 pt-0 space-y-4">-->
+<!--                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">-->
+<!--                            <div class="space-y-2"><label-->
+<!--                                    class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"-->
+<!--                                    for="default-duration">Default Exam Duration (minutes)</label><input-->
+<!--                                    class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"-->
+<!--                                    id="default-duration" type="number" value="180"></div>-->
+<!--                            <div class="space-y-2"><label-->
+<!--                                    class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"-->
+<!--                                    for="buffer-time">Buffer Time Between Exams (minutes)</label><input-->
+<!--                                    class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"-->
+<!--                                    id="buffer-time" type="number" value="30"></div>-->
+<!--                            <div class="space-y-4"><label-->
+<!--                                    class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"-->
+<!--                                    for="invigilator-capacity">Invigilator Capacity</label>-->
+<!--                                <p class="text-sm text-muted-foreground">Set the maximum number of students per-->
+<!--                                    invigilator</p>-->
+<!--                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">-->
+<!--                                    <div><button type="button" role="combobox" aria-controls="radix-«ru»"-->
+<!--                                                 aria-expanded="false" aria-autocomplete="none" dir="ltr"-->
+<!--                                                 data-state="closed"-->
+<!--                                                 class="flex h-10 w-full items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 [&amp;>span]:line-clamp-1"><span-->
+<!--                                            style="pointer-events: none;">30 students per invigilator</span><svg-->
+<!--                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"-->
+<!--                                            viewBox="0 0 24 24" fill="none" stroke="currentColor"-->
+<!--                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"-->
+<!--                                            class="lucide lucide-chevron-down h-4 w-4 opacity-50"-->
+<!--                                            aria-hidden="true">-->
+<!--                                        <path d="m6 9 6 6 6-6"></path>-->
+<!--                                    </svg></button></div>-->
+<!--                                    <div><input-->
+<!--                                            class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"-->
+<!--                                            placeholder="Custom value" min="1" max="100" type="number" value="30">-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                                <div class="bg-muted p-3 rounded-md mt-2">-->
+<!--                                    <p class="text-sm"><strong>Note:</strong> This setting will be used to-->
+<!--                                        automatically calculate the number of invigilators needed for each exam-->
+<!--                                        based on student enrollment.</p>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="space-y-2"><label-->
+<!--                                    class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"-->
+<!--                                    for="default-venue">Default Venue</label><button type="button" role="combobox"-->
+<!--                                                                                     aria-controls="radix-«rv»" aria-expanded="false" aria-autocomplete="none"-->
+<!--                                                                                     dir="ltr" data-state="closed"-->
+<!--                                                                                     class="flex h-10 w-full items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 [&amp;>span]:line-clamp-1"><span-->
+<!--                                    style="pointer-events: none;">Engineering Hall</span><svg-->
+<!--                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24"-->
+<!--                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"-->
+<!--                                    stroke-linecap="round" stroke-linejoin="round"-->
+<!--                                    class="lucide lucide-chevron-down h-4 w-4 opacity-50" aria-hidden="true">-->
+<!--                                <path d="m6 9 6 6 6-6"></path>-->
+<!--                            </svg></button></div>-->
+<!--                        </div>-->
+<!--                        <div data-orientation="horizontal" role="none" class="shrink-0 bg-border h-[1px] w-full">-->
+<!--                        </div>-->
+<!--                        <div class="space-y-4">-->
+<!--                            <h4 class="font-medium">Required Staff Roles</h4>-->
+<!--                            <div class="space-y-2">-->
+<!--                                <div class="flex items-center space-x-2"><button type="button" role="switch"-->
+<!--                                                                                 aria-checked="true" data-state="checked" value="on"-->
+<!--                                                                                 class=" btn btn-dark peer inline-flex h-6 w-11 shrink-0 cursor-pointer items-center rounded-full border-2 border-transparent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary data-[state=unchecked]:bg-input"-->
+<!--                                                                                 id="chief-invigilator"><span data-state="checked"-->
+<!--                                                                                                              class="pointer-events-none block h-5 w-5 rounded-full bg-background shadow-lg ring-0 transition-transform data-[state=checked]:translate-x-5 data-[state=unchecked]:translate-x-0"></span></button><label-->
+<!--                                        class=" text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"-->
+<!--                                        for="chief-invigilator">Chief Invigilator</label></div>-->
+<!--                                <div class="flex items-center space-x-2"><button type="button" role="switch"-->
+<!--                                                                                 aria-checked="true" data-state="checked" value="on"-->
+<!--                                                                                 class="peer inline-flex h-6 w-11 shrink-0 cursor-pointer items-center rounded-full border-2 border-transparent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary data-[state=unchecked]:bg-input"-->
+<!--                                                                                 id="assistant-invigilator"><span data-state="checked"-->
+<!--                                                                                                                  class="pointer-events-none block h-5 w-5 rounded-full bg-background shadow-lg ring-0 transition-transform data-[state=checked]:translate-x-5 data-[state=unchecked]:translate-x-0"></span></button><label-->
+<!--                                        class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"-->
+<!--                                        for="assistant-invigilator">Assistant Invigilator</label></div>-->
+<!--                                <div class="flex items-center space-x-2"><button type="button" role="switch"-->
+<!--                                                                                 aria-checked="true" data-state="checked" value="on"-->
+<!--                                                                                 class="peer inline-flex h-6 w-11 shrink-0 cursor-pointer items-center rounded-full border-2 border-transparent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary data-[state=unchecked]:bg-input"-->
+<!--                                                                                 id="administrator"><span data-state="checked"-->
+<!--                                                                                                          class="pointer-events-none block h-5 w-5 rounded-full bg-background shadow-lg ring-0 transition-transform data-[state=checked]:translate-x-5 data-[state=unchecked]:translate-x-0"></span></button><label-->
+<!--                                        class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"-->
+<!--                                        for="administrator">Administrator</label></div>-->
+<!--                                <div class="flex items-center space-x-2"><button type="button" role="switch"-->
+<!--                                                                                 aria-checked="true" data-state="checked" value="on"-->
+<!--                                                                                 class="peer inline-flex h-6 w-11 shrink-0 cursor-pointer items-center rounded-full border-2 border-transparent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary data-[state=unchecked]:bg-input"-->
+<!--                                                                                 id="support-staff"><span data-state="checked"-->
+<!--                                                                                                          class="pointer-events-none block h-5 w-5 rounded-full bg-background shadow-lg ring-0 transition-transform data-[state=checked]:translate-x-5 data-[state=unchecked]:translate-x-0"></span></button><label-->
+<!--                                        class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"-->
+<!--                                        for="support-staff">Support Staff</label></div>-->
+<!--                            </div>-->
+
+<!--                            <hr  style="width: 68rem;margin-top: 1rem;">-->
+<!--                        </div>-->
+<!--                        <div data-orientation="horizontal" role="none"-->
+<!--                             class="shrink-0 bg-border h-[1px] w-full my-6"></div>-->
+<!--                        <div class="space-y-4">-->
+<!--                            <h4 class="font-medium">Invigilator Assignment Rules</h4>-->
+<!--                            <div class="space-y-4">-->
+<!--                                <div class="flex items-center justify-between">-->
+<!--                                    <div>-->
+<!--                                        <h4 class="font-medium">Auto-balance Workload</h4>-->
+<!--                                        <p class="text-sm text-muted-foreground">Distribute students evenly among-->
+<!--                                            invigilators</p>-->
+<!--                                    </div><button type="button" role="switch" aria-checked="true"-->
+<!--                                                  data-state="checked" value="on"-->
+<!--                                                  class="peer inline-flex h-6 w-11 shrink-0 cursor-pointer items-center rounded-full border-2 border-transparent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary data-[state=unchecked]:bg-input"><span-->
+<!--                                        data-state="checked"-->
+<!--                                        class="pointer-events-none block h-5 w-5 rounded-full bg-background shadow-lg ring-0 transition-transform data-[state=checked]:translate-x-5 data-[state=unchecked]:translate-x-0"></span></button>-->
+<!--                                </div>-->
+<!--                                <div class="flex items-center justify-between">-->
+<!--                                    <div>-->
+<!--                                        <h4 class="font-medium">Subject Specialization</h4>-->
+<!--                                        <p class="text-sm text-muted-foreground">Assign invigilators with relevant-->
+<!--                                            subject expertise</p>-->
+<!--                                    </div><button type="button" role="switch" aria-checked="true"-->
+<!--                                                  data-state="checked" value="on"-->
+<!--                                                  class=" btn btn-check peer inline-flex h-6 w-11 shrink-0 cursor-pointer items-center rounded-full border-2 border-transparent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary data-[state=unchecked]:bg-input"><span-->
+<!--                                        data-state="checked"-->
+<!--                                        class="pointer-events-none block h-5 w-5 rounded-full bg-background shadow-lg ring-0 transition-transform data-[state=checked]:translate-x-5 data-[state=unchecked]:translate-x-0"></span></button>-->
+<!--                                </div>-->
+<!--                                <div class="flex items-center justify-between">-->
+<!--                                    <div>-->
+<!--                                        <h4 class="font-medium">Experience Level Requirement</h4>-->
+<!--                                        <p class="text-sm text-muted-foreground">Require at least one experienced-->
+<!--                                            invigilator per exam</p>-->
+<!--                                    </div><button class="btn btn-check" type="button" role="switch" aria-checked="true"-->
+<!--                                                  data-state="checked" value="on"-->
+<!--                                                  class="peer inline-flex h-6 w-11 shrink-0 cursor-pointer items-center rounded-full border-2 border-transparent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary data-[state=unchecked]:bg-input"><span-->
+<!--                                        data-state="checked"-->
+<!--                                        class="pointer-events-none block h-5 w-5 rounded-full bg-background shadow-lg ring-0 transition-transform data-[state=checked]:translate-x-5 data-[state=unchecked]:translate-x-0"></span></button>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="flex justify-end mt-6"><button-->
+<!--                        class="justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 flex items-center gap-2"><svg-->
+<!--                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"-->
+<!--                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"-->
+<!--                        stroke-linejoin="round" class="lucide lucide-save w-4 h-4">-->
+<!--                    <path-->
+<!--                            d="M15.2 3a2 2 0 0 1 1.4.6l3.8 3.8a2 2 0 0 1 .6 1.4V19a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z">-->
+<!--                    </path>-->
+<!--                    <path d="M17 21v-7a1 1 0 0 0-1-1H8a1 1 0 0 0-1 1v7"></path>-->
+<!--                    <path d="M7 3v4a1 1 0 0 0 1 1h7"></path>-->
+<!--                </svg>Save Changes</button></div>-->
+<!--            </div>-->
+
+
+<!--            <div *ng data-state="inactive" data-orientation="horizontal" role="tabpanel"-->
+<!--                 aria-labelledby="radix-«r0»-trigger-notifications" hidden="" id="radix-«r0»-content-notifications"-->
+<!--                 tabindex="0"-->
+<!--                 class="mt-2 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">-->
+<!--            </div>-->
+<!--            <div data-state="inactive" data-orientation="horizontal" role="tabpanel"-->
+<!--                 aria-labelledby="radix-«r0»-trigger-staff" hidden="" id="radix-«r0»-content-staff" tabindex="0"-->
+<!--                 class="mt-2 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">-->
+<!--            </div>-->
+<!--            <div data-state="inactive" data-orientation="horizontal" role="tabpanel"-->
+<!--                 aria-labelledby="radix-«r0»-trigger-exams" hidden="" id="radix-«r0»-content-exams" tabindex="0"-->
+<!--                 class="mt-2 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+<!--</body>-->
