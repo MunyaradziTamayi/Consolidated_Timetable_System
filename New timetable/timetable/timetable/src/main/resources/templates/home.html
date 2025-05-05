@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Styled Dashboard</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: sans-serif;
+            display: grid;
+            grid-template-columns: 220px 1fr;
+            grid-template-rows: 60px 1fr;
+            height: 100vh;
+            background-color: white;
+        }
+
+        .sidebar {
+            width: 100%;
+            background-color: white;
+            color: white;
+            padding: 10px 16px;
+            grid-row: 2;
+            box-sizing: border-box;
+        }
+
+        .sidebar h2 {
+            margin-top: 0px;
+            margin-bottom: 8px;
+            margin-left: 8px;
+            font-size: 12px;
+            font-weight: 400;
+            color: #505050;
+        }
+
+        .radio-group {
+            margin-top: 0px;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        /* Hide native radio inputs */
+        .radio-group input[type="radio"] {
+            display: none;
+        }
+
+        .radio-group label {
+            padding: 8px 12px;
+            background-color: white;
+            font-weight: 400;
+            font-size: 13px;
+            color: #252525;
+            border-radius: 16px;
+            border-color: #cccccc;
+            border-width: 1px;
+            border-style: solid;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            user-select: none;
+        }
+
+        /* Style when the radio is checked */
+        .radio-group input[type="radio"]:checked + label {
+            background-color: #252525;
+            color: white;
+            font-weight: bold;
+        }
+
+        .radio-group input[type="radio"]:hover + label {
+            background-color: #252525;
+            color: white;
+            font-weight: bold;
+        }
+
+        .main-content {
+            flex: 1;
+            box-sizing: border-box;
+            grid-column: 2;
+            grid-row: 2;
+            margin-right: 16px;
+            margin-top: 32px;
+            margin-bottom: 16px;
+            border-radius: 16px;
+            border-color: #cccccc;
+            border-style: solid;
+            border-width: 1px;
+            width: 1fr;
+            height: 1fr;
+            padding: 16px;
+        }
+
+        .main-content h1 {
+            margin-top: 0;
+        }
+
+        .main-content table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .main-content th {
+            padding: 8px;
+            text-align: left;
+            font-size: 16px;
+            font-weight: 400;
+            color: #252525;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .main-content td {
+            padding: 8px;
+            text-align: left;
+            font-size: 14px;
+            color: #404040;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .main-content tbody tr:hover {
+            background-color: #252525;
+            color: white;
+            cursor: pointer;
+        }
+
+        .main-content tbody tr:hover td {
+            color: white;
+            cursor: pointer;
+        }
+
+        .navigation {
+            display: grid;
+            grid-template-columns: 1fr max-content max-content;
+            grid-column: 2;
+            padding-right: 0px;
+        }
+
+        .navigation h1 {
+            margin: 0;
+            font-size: 16px;
+            margin-left: 16px;
+            font-weight: 600;
+            color: #252525;
+            align-self: center;
+        }
+
+        .navigation button {
+            display: inline-block;
+            padding: 8px 12px;
+            align-self: center;
+            color: #252525;
+            font-size: 12px;
+            cursor: pointer;
+            font-weight: 400;
+            margin-right: 16px;
+            border-style: solid;
+            border-radius: 16px;
+            border-color: #ccc;
+            border-width: 1px;
+            background-color: white;
+            transition: 0.3s ease-in-out;
+        }
+
+        .navigation button:hover {
+            background-color: #252525;
+            color: white;
+            border-color: #252525;
+        }
+
+        .bottom-sheet-container {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 96%;
+            background-color: white;
+            border-radius: 16px;
+            margin: 2%;
+            border-color: #ccc;
+            border-width: 1px;
+            border-style: solid;
+            transform: translateY(106%); /* Initially hidden */
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .bottom-sheet-container.open {
+            transform: translateY(0%); /* Slide up when open class is added */
+        }
+
+        .bottom-sheet-header {
+            padding: 24px 48px;
+            display: grid;
+            grid-template-columns: 1fr max-content;
+        }
+
+        .bottom-sheet-header h3 {
+            font-size: 20px;
+            color: #252525;
+            font-weight: 600;
+        }
+
+        .bottom-sheet-header button {
+            align-self: center;
+            background-color: white;
+            border-radius: 16px;
+            border: none;
+            height: 32px;
+            width: 32px;
+            display: grid;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .bottom-sheet-header button:hover {
+            background-color: red;
+        }
+
+        .bottom-sheet-header button:hover img {
+            filter: invert();
+        }
+
+        .bottom-sheet-header img {
+            width: 16px;
+            height: 16px;
+
+        }
+
+        .bottom-sheet-content {
+            display: grid;
+            grid-template-columns: max-content 1fr;
+            margin: 0px 56px 24px 56px;
+            border-radius: 16px;
+            border-color: #ccc;
+            padding: 24px;
+            border-width: 1px;
+            border-style: solid;
+        }
+
+        .bottom-sheet-content img {
+            width: 48px;
+            height: 48px;
+            align-self: center;
+            justify-self: center;
+        }
+
+        .bottom-sheet-footer {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr 1fr;
+            padding: 32px 48px;
+        }
+
+        .bottom-sheet-footer button {
+            background-color: white;
+            border-radius: 16px;
+            border-width: 1px;
+            border-color: #252525;
+            border-style: solid;
+            color: #252525;
+            font-weight: 600;
+            font-size: 14px;
+            padding: 8px;
+            transition: 0.3s ease-in-out;
+        }
+
+        .bottom-sheet-footer button:hover {
+            background-color: #505050;
+        }
+
+        .bottom-sheet-container input {
+            display: none;
+        }
+
+        .bottom-sheet-content p {
+            font-size: 16px;
+            color: #252525;
+            font-weight: 400;
+            margin-left: 16px;
+            align-self: center;
+        }
+
+        .bottom-sheet-content:hover {
+            background-color: #f0f0f0;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="navigation">
+    <h1>Timetable lookup application</h1>
+
+    <button onclick="openBottomSheet()">Show Timetable</button>
+
+</div>
+
+<div class="sidebar">
+    <h2>Select a Day</h2>
+    <div class="radio-group">
+        <input type="radio" id="monday" name="day" value="monday" onchange="setDate(this,'Monday')"/>
+        <label for="monday">Monday</label>
+
+        <input type="radio" id="tuesday" name="day" value="tuesday" onchange="setDate(this,'Tuesday')"/>
+        <label for="tuesday">Tuesday</label>
+
+        <input type="radio" id="wednesday" name="day" value="wednesday" onchange="setDate(this,'Wednesday')"/>
+        <label for="wednesday">Wednesday</label>
+
+        <input type="radio" id="thursday" name="day" value="thursday" onchange="setDate(this,'Thursday')"/>
+        <label for="thursday">Thursday</label>
+
+        <input type="radio" id="friday" name="day" value="friday" onchange="setDate(this,'Friday')"/>
+        <label for="friday">Friday</label>
+    </div>
+
+    <h2 style="margin-top: 24px;">Select time</h2>
+    <div class="radio-group">
+        <input type="radio" id="eight" name="time" value="monday" onchange="setTime(this,'8:00 - 10:00am')"/>
+        <label for="eight">08:00-10:00</label>
+
+        <input type="radio" id="ten" name="time" value="tuesday" onchange="setTime(this,'10:15-12:15am')"/>
+        <label for="ten">10:15-12:15</label>
+
+        <input type="radio" id="twelve" name="time" value="wednesday" onchange="setTime(this,'12:15-13:15pm')"/>
+        <label for="twelve">12:15-13:15</label>
+
+        <input type="radio" id="two" name="time" value="thursday" onchange="setTime(this,'14:00-16:00pm')"/>
+        <label for="two">14:00-16:00</label>
+
+        <input type="radio" id="four" name="time" value="friday" onchange="setTime(this,'14:00-16:00pm')"/>
+        <label for="four">16:00-18:00</label>
+    </div>
+
+</div>
+
+
+<div class="main-content">
+    <table id="roomsTable">
+        <thead>
+        <tr>
+            <th style="white-space: nowrap;width: 1%; padding-left: 16px; padding-right: 16px;"></th>
+            <th>Room</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>1</td>
+            <td>Row 1, Column 2</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Row 2, Column 2</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Row 3, Column 2</td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>
+
+<div id="bottomSheet" class="bottom-sheet-container">
+
+    <div class="bottom-sheet-header">
+        <h3>Timetable</h3>
+
+        <button onclick="closeBottomSheet()">
+            <img src="/images/close_icon.svg" alt="close">
+        </button>
+    </div>
+    <input type="file" id="fileInput">
+    <label for="fileInput" class="bottom-sheet-content">
+        <img src="/images/pdf_icon.svg" alt="pdf icon">
+        <p id="status">This is the file.pdf</p>
+
+    </label>
+
+    <div class="bottom-sheet-footer">
+        <button onclick="closeBottomSheet()">Cancel</button>
+        <div></div>
+        <button style="background-color: #252525; color: white;" onclick="uploadFile()">Upload</button>
+
+    </div>
+</div>
+
+<script>
+    const bottomSheet = document.getElementById('bottomSheet');
+
+    var date = "Monday";
+    var time = "8:00 - 10:00am";
+
+    function openBottomSheet() {
+        bottomSheet.classList.add('open');
+
+    }
+
+    function closeBottomSheet() {
+        bottomSheet.classList.remove('open');
+    }
+
+    async function uploadFile() {
+        const fileInput = document.getElementById('fileInput');
+        const statusDiv = document.getElementById('status');
+        const file = fileInput.files[0];
+
+        if (!file) {
+            statusDiv.textContent = 'Please select a file.';
+            return;
+        }
+
+        statusDiv.textContent = 'Preparing to upload...';
+
+        try {
+            const formData = new FormData();
+            formData.append('file', file); // 'file' is the field name the server expects
+
+            const response = await fetch('http://localhost:8080/upload', { // Replace '/upload' with your server endpoint
+                method: 'POST',
+                body: formData,
+            });
+
+            if (response.ok) {
+                statusDiv.textContent = 'File uploaded successfully! Server responded with OK.';
+                closeBottomSheet();
+            } else {
+                statusDiv.textContent = `File upload failed. Server responded with status: ${response.status}`;
+
+            }
+
+        } catch (error) {
+            statusDiv.textContent = `An error occurred during the upload: ${error.message}`;
+            console.error('Upload error:', error);
+        }
+    }
+
+    function setDate(radioButton, date) {
+        if (radioButton.checked) {
+            this.date = date;
+            fetchData();
+        }
+    }
+
+    function setTime(radioButton,time) {
+        if (radioButton.checked) {
+            this.time = time;
+            fetchData();
+        }
+    }
+
+    async function fetchData() {
+
+        const data = {
+            date: date,
+            time: time
+        }
+
+        const tableBody = document.querySelector('#roomsTable tbody');
+        tableBody.innerHTML = '';
+
+        try {
+
+            const response = await fetch('http://localhost:8080/free_slots', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data),
+            });
+
+            if (response.ok) {
+
+                const rooms = await response.json();
+
+                rooms.forEach(room => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+          <td>${room.number}</td>
+          <td>${room.name}</td>
+        `;
+                    tableBody.appendChild(row);
+                });
+
+            } else {
+                alert(response.statusText);
+
+            }
+
+        } catch (error) {
+            alert(error);
+            console.error('Upload error:', error);
+        }
+
+
+    }
+
+
+</script>
+
+</body>
+</html>
