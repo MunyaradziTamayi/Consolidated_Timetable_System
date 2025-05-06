@@ -13,7 +13,7 @@ class MainController {
         @GetMapping("/")
         fun home(): String {
             println("home called")
-            return "home"
+            return "index"
         }
 
 }
